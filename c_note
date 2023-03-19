@@ -1,0 +1,45 @@
+
+
+编译过程
+编译器： gcc
+
+
+ 源文件--预处理--编译--汇编--链接--可执行文件
+  .c -->  .out
+
+
+预处理:  gcc -E hello.c
+    保存预处理文件  gcc -E hello.c > hello.i
+
+编译：   gcc -S hello.i
+
+
+汇编：  gcc -c hello.s
+
+链接并指定生成文件为hello： gcc hello.o -o hell
+
+
+测试 ：  ./hello
+
+
+对上面过程进行包装：  gcc hello.c  即可在当前目录生成可执行文件
+
+
+也可以用make 进行编译  
+
+
+运行 vim  /etc/vimrc    对vim编辑器进行修改
+建议  cp /etc/vimrc ~/.vimrc   复制一份在自己的家目录，这样 这个vim只对当前用户有效，而不会修改所有用户的vim
+
+ 想查看 函数原型 直接在vim 中光标放在函数上 按shift+k
+
+gcc hello.c -Wall 编译并打印所有警告
+
+
+echo $? 打印上一行命令的输出状态
+
+
+ 
+
+
+
